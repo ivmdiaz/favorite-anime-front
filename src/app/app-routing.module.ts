@@ -2,8 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'series', pathMatch: 'full' },
-  { path: 'series', loadChildren: () => import(`./feature/series/series.module`).then(m => m.SeriesModule) }
+  {
+    path: '',
+    pathMatch: 'full',
+    loadChildren: () => import('./pages/homepage/homepage.module').then(m => m.HomepageModule)
+  },
 ];
 
 @NgModule({
