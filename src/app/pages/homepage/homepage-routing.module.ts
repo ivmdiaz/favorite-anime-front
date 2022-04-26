@@ -5,7 +5,6 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 const routes: Routes = [{ path: '', component: HomePageComponent }];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)]
 })
 export class HomepageRoutingModule { }

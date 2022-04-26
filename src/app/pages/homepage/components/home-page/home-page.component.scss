@@ -5,3 +5,7 @@
 .homepage-card-content {
     min-height: 6em;
 }
+
+.homepage-card:hover {
+  background: var(--color-primary);
+}

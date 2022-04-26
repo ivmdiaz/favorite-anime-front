@@ -1,6 +1,6 @@
-import { MatCard } from './../../../../shared/interfaces/mat-card.interface';
 import { Component, OnInit } from '@angular/core';
-import { ANIMES } from '../../interfaces/home-page-card.interface';
+import { Router } from '@angular/router';
+import { ANIMES, MatCardAnime } from '../../interfaces/home-page-card.interface';
 
 @Component({
   selector: 'app-home-page',
@@ -9,12 +9,16 @@ import { ANIMES } from '../../interfaces/home-page-card.interface';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
 
-  get datasource(): MatCard[] {
+  get datasource(): MatCardAnime[] {
     return ANIMES;
+  }
+
+  navigate(routerLink: string) {
+    this.router.navigate([routerLink])
   }
 }

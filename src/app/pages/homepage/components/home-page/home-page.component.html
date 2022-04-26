@@ -1,7 +1,7 @@
 <main class="homepage">
   <div fxLayout="row wrap" fxLayoutGap="1em grid">
     <div fxFlex="33%" fxFlex.sm="33%" fxFlex.xs="100%" fxFlexFill *ngFor="let element of datasource">
-      <mat-card>
+      <mat-card class="homepage-card" (click)="navigate(element.routerLink)">
         <mat-card-header>
           <mat-card-title>{{element.title}}</mat-card-title>
           <mat-card-subtitle>{{element.subtitle}}</mat-card-subtitle>
