@@ -1,10 +1,10 @@
-import { MatCard } from 'src/app/shared/interfaces/mat-card.interface';
+import { MatCardModel } from 'src/app/shared/interfaces/mat-card.interface';
 
-export interface MatCardAnime extends MatCard {
+export interface MatCardAnimeModel extends MatCardModel {
   routerLink: string;
 }
 
-export const ANIMES: MatCardAnime[] = [
+export const ANIMES: MatCardAnimeModel[] = [
   {
     title: "One Piece",
     subtitle: "Eiichirō Oda",

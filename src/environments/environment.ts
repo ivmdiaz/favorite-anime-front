@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api: {
+    dns: 'https://favorite-anime-back.herokuapp.com',
+    path: 'series-api',
+    subpaths: {
+      onepiece: '/anime/one-piece'
+    }
+  }
 };
 
 /*

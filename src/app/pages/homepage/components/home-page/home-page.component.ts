@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ANIMES, MatCardAnime } from '../../interfaces/home-page-card.interface';
+import { ANIMES, MatCardAnimeModel } from '../../interfaces/home-page-card.interface';
 
 @Component({
   selector: 'app-home-page',
@@ -14,7 +14,7 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get datasource(): MatCardAnime[] {
+  get datasource(): MatCardAnimeModel[] {
     return ANIMES;
   }
 

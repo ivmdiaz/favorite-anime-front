@@ -1,4 +1,4 @@
-export interface MatCard {
+export interface MatCardModel {
   title: string;
   subtitle: string;
   image: string;
