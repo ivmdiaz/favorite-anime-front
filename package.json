@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ivmdiaz.github.io/favorite-anime-front",
   "name": "favorite-anime-front",
   "version": "0.0.0",
   "scripts": {
@@ -24,6 +25,7 @@
     "@angular/router": "~13.3.4",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+    "angular-cli-ghpages": "^1.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
