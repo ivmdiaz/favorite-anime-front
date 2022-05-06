@@ -1,7 +1,7 @@
 <main class="list-character">
   <div fxLayout="row wrap" fxLayoutGap="1em grid">
     <div fxFlex="20%" fxFlex.sm="50%" fxFlex.xs="100%" fxFlexFill *ngFor="let element of datasource">
-      <mat-card class="list-character-card" (click)="navigate(element.routerLink)">
+      <mat-card class="list-character-card" (click)="navigate(element)">
         <mat-card-header class="list-character-card-header">
           <mat-card-title>{{element.name}}</mat-card-title>
           <mat-card-subtitle>{{element.alias}}</mat-card-subtitle>
@@ -14,4 +14,3 @@
     </div>
   </div>
 </main>
-<app-footer></app-footer>

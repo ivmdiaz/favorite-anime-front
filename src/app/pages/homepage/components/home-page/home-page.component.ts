@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { CardComponent } from './../../../../shared/interfaces/card-component.interface';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ANIMES, MatCardAnimeModel } from '../../interfaces/home-page-card.interface';
 
@@ -7,18 +8,14 @@ import { ANIMES, MatCardAnimeModel } from '../../interfaces/home-page-card.inter
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent implements CardComponent {
+
+  datasource: MatCardAnimeModel[] = ANIMES;
 
   constructor(public router: Router) { }
-
-  ngOnInit(): void {
-  }
-
-  get datasource(): MatCardAnimeModel[] {
-    return ANIMES;
-  }
 
   navigate(routerLink: string) {
     this.router.navigate([routerLink])
   }
+
 }

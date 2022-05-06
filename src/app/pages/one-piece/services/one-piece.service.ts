@@ -15,7 +15,15 @@ export class OnePieceService extends UtilService {
   }
 
   getCharacters(): Observable<CharacterModel[]> {
-    return this.http.get(`${environment.api.subpaths.onepiece}/character`) as any;
+    return this.getDataSession('characters', this.http.get(`${environment.api.subpaths.onepiece}/character`));
+  }
+
+  setCharacterSelected(data: CharacterModel): void {
+    this.setDataSession('character-selected', data);
+  }
+
+  getCharacterSelected(): Observable<CharacterModel> {
+    return this.getDataSession('character-selected');
   }
 
 }

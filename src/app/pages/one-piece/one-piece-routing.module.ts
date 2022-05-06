@@ -1,8 +1,12 @@
+import { CharacterListComponent } from './components/character-list/character-list.component';
+import { CharacterDetailComponent } from './components/character-detail/character-detail.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListCharactersComponent } from './components/list-characters/list-characters.component';
 
-const routes: Routes = [{ path: '', component: ListCharactersComponent }];
+const routes: Routes = [
+  { path: '', component: CharacterListComponent, pathMatch: 'full' },
+  { path: 'character', component: CharacterDetailComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
