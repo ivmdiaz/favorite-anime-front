@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatListModule } from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatTabsModule } from '@angular/material/tabs';
+
 
 
 const MODULES = [
-  MatToolbarModule,
   MatIconModule,
-  MatGridListModule,
   MatButtonModule,
-  MatCardModule
+  MatCardModule,
+  MatChipsModule,
+  MatListModule,
+  MatDividerModule,
+  MatTabsModule
 ]
 
 @NgModule({

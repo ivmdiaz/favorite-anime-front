@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   api: {
-    dns: 'http://localhost:8080',
+    dns: 'https://favorite-anime-back.herokuapp.com',
     path: 'series-api',
     subpaths: {
       onepiece: '/anime/one-piece'

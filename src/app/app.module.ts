@@ -8,6 +8,8 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RestInterceptor } from './security/interceptor/rest.interceptor';
 import { SpinnerModule } from './shared/modules/spinner/spinner.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -19,6 +21,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     SpinnerModule,
 

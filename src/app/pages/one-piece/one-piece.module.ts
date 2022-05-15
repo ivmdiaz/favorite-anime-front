@@ -5,6 +5,7 @@ import { CommonsModule } from 'src/app/shared/modules/commons/commons.module';
 import { CharacterListBaseModule } from 'src/app/shared/modules/character-list-base/character-list-base.module';
 import { CharacterDetailComponent } from './components/character-detail/character-detail.component';
 import { CharacterListComponent } from './components/character-list/character-list.component';
+import { CharacterDetailBaseModule } from 'src/app/shared/modules/character-detail-base/character-detail-base.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CharacterListComponent } from './components/character-list/character-li
   imports: [
     CommonsModule,
     OnePieceRoutingModule,
-    CharacterListBaseModule
+    CharacterListBaseModule,
+    CharacterDetailBaseModule
   ]
 })
 export class OnePieceModule { }

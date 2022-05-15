@@ -1,5 +1,8 @@
 {
   "lbls": {
-    "title-app": "Favorite Anime"
+    "title-app": "Favorite Anime",
+    "introduction": "Introduction",
+    "history": "History",
+    "abilities": "Abilities"
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { CharacterDetailModel } from 'src/app/shared/interfaces/character.interface';
+import { OnePieceService } from '../../services/one-piece.service';
 
 @Component({
   selector: 'app-character-detail',
@@ -8,10 +9,13 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class CharacterDetailComponent implements OnInit {
 
-  constructor() { }
+  datasource: CharacterDetailModel;
+
+  constructor(public service: OnePieceService) {
+    this.service.getCharacterDetail().subscribe(result => this.datasource = result);
+  }
 
   ngOnInit(): void {
-
   }
 
 }

@@ -11,4 +11,8 @@ export class UtilService extends SessionAppService {
   getPathImage(image: ImageModel): string {
     return getPathImageUtil(image);
   }
+
+  getPTags(text: string): string[] {
+    return text.split(/\n/g);
+  }
 }

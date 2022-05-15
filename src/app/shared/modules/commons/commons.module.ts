@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { FooterModule } from './../footer/footer.module';
 import { MaterialModule } from './../material/material.module';
 import { NgModule } from '@angular/core';
@@ -6,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 const MODULES = [
   CommonModule,
+  TranslateModule,
   MaterialModule,
   FlexLayoutModule,
   FooterModule
