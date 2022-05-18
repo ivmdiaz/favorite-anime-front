@@ -21,10 +21,6 @@ export class RestInterceptor implements HttpInterceptor {
 
     this.spinner.show();
 
-    if (request.url.includes('i18n')) {
-      return next.handle(request).pipe(finalize(() => this.finalize()));
-    }
-
     if (request.url.indexOf('/assets') > 0) {
       return next.handle(request).pipe(finalize(() => this.finalize()));
     }
@@ -49,7 +45,7 @@ export class RestInterceptor implements HttpInterceptor {
           }
         }),
         catchError((error: HttpErrorResponse) => {
-          return throwError('');
+          return throwError(error.message);
         }),
         retry(1),
         timeout(SESION_TIME_OUT),

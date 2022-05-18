@@ -50,7 +50,7 @@ export class OnePieceService extends UtilService {
 
       let itemRelationship = {
         relationship: { id: 1, code: 'NN', name: 'Father' },
-        relationshipCharacter: {
+        character: {
           alias: "Luffy",
           birthday: "1900-05-05",
           id: 1,

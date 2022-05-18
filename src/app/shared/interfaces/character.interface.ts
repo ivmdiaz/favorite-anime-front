@@ -34,5 +34,4 @@ export interface TagModel extends KeyValueModel {
 export interface RelationshipModel {
   character: CharacterModel;
   relationship: KeyValueModel;
-  relationshipCharacter: CharacterModel;
 }
