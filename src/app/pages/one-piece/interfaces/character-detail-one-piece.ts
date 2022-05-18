@@ -1,5 +1,5 @@
-import { ImageModel } from './../../../shared/interfaces/image.interface';
-import { CharacterDetailModel } from './../../../shared/interfaces/character.interface';
+import { CharacterDetailModel } from "src/app/shared/interfaces/character.interface";
+import { ImageModel } from "src/app/shared/interfaces/image.interface";
 
 export interface CharacterDetailOnePieceModel extends CharacterDetailModel {
   devilFruit: DevilFruitModel;

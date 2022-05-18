@@ -1,4 +1,4 @@
-<div fxLayout="column">
+<div fxLayout="column" *ngIf="datasource">
   <div class="gallery-current">
     <img class="gallery-current-image" [src]="currentValue.url">
     <button class="prev" mat-mini-fab color="primary" (click)="next()">
@@ -9,8 +9,8 @@
     </button>
   </div>
 
-  <div *ngIf="selector" fxLayout="row wrap" fxLayoutGap="grid">
-    <div fxFlex="20" *ngFor="let image of datasource; index as i">
+  <div *ngIf="selector" fxLayout="row wrap" fxLayoutAlign="center center">
+    <div fxFlex="20%" *ngFor="let image of datasource; index as i">
       <img class="gallery-selector-image" [src]="image.url" (click)="selectImage(i)">
     </div>
   </div>

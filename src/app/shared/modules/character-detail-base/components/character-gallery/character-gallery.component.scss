@@ -9,7 +9,7 @@
 .next {
   margin-right: 0.5em;
   position: absolute;
-  align-self:flex-end;
+  align-self: flex-end;
   top: 50%;
   opacity: 0.4;
 }
@@ -17,7 +17,7 @@
 .prev {
   margin-left: 0.5em;
   position: absolute;
-  align-self:flex-start;
+  align-self: flex-start;
   top: 50%;
   opacity: 0.4;
 }
@@ -32,8 +32,8 @@
 .gallery-current-image,
 .gallery-selector-image {
   max-width: 100%;
-  height: auto;
-  object-fit: cover;
+  max-height: 450px;
+  object-fit: scale-down;
 }
 
 .gallery-selector-image {

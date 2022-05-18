@@ -1,41 +1,34 @@
-<div class="container-character">
+<div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="1em">
 
-  <div fxLayout.lt-sm="column" fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="center">
-
-    <div fxFlex.lt-sm="100" fxFlex="30" fxLayout="column" fxLayoutAlign="center center">
-      <div fxLayoutAlign="center">
-        <img class="image-avatar" src="{{service.getPathImage(character.image)}}" alt="image not found">
-      </div>
-      <div fxLayoutAlign="center" class="w-100">
-        <button mat-raised-button class="gallery-button">Gallery</button>
-      </div>
+  <div fxFlex="40%" fxLayout="column">
+    <div fxLayoutAlign="center center">
+      <h1>{{character.name}}</h1>
     </div>
-
-    <div fxFlex.lt-sm="100" fxFlex="50">
-      <div class="character-title">
-        <h1>{{character.name}}</h1>
-      </div>
-      <mat-divider></mat-divider>
-      <mat-list>
-        <mat-list-item>
-          <mat-icon mat-list-icon>abc</mat-icon>
-          <div mat-line>{{character.alias}}</div>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon mat-list-icon>cake</mat-icon>
-          <div mat-line>{{character.birthday | date: 'MMMM d'}}</div>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon mat-list-icon>sailing</mat-icon>
-          <div mat-line>{{location.name}}</div>
-        </mat-list-item>
-      </mat-list>
-      <mat-divider></mat-divider>
-      <div class="mat-chip-list-wrapper">
-        <mat-chip-list>
-          <mat-chip *ngFor="let tag of tags">{{tag.name}}</mat-chip>
-        </mat-chip-list>
-      </div>
+    <div fxLayoutAlign="center center">
+      <img class="image-avatar" src="{{service.getPathImage(character.image)}}" alt="image not found">
     </div>
   </div>
+
+  <div fxFlex="40%" fxLayout="column" fxLayoutAlign="center stretch" fxLayoutGap="1em">
+    <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="center center">
+      <div fxFlex="33%" fxFlex.sm="20%" fxLayout="column" fxLayoutAlign="center center">
+        <img class="image-presentation" src="assets/img/character/birthday.png">
+        <h3>{{character.birthday | date: 'MMMM d'}}</h3>
+      </div>
+      <div fxFlex="33%" fxFlex.sm="20%" fxLayout="column" fxLayoutAlign="center center">
+        <img class="image-presentation" src="assets/img/character/place.png">
+        <h3>{{location.name}}</h3>
+      </div>
+      <div fxFlex="33%" fxFlex.sm="20%" fxLayout="column" fxLayoutAlign="center center">
+        <img class="image-presentation" src="assets/img/character/alias.png">
+        <h3>{{character.alias}}</h3>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <mat-chip-list fxFlex.sm="80%">
+        <mat-chip *ngFor="let tag of tags" class="chip-presentation">{{tag.name}}</mat-chip>
+      </mat-chip-list>
+    </div>
+  </div>
+
 </div>

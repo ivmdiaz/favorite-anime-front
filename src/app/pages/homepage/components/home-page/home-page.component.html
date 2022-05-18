@@ -1,13 +1,13 @@
-<main class="homepage">
-  <div fxLayout="row wrap" fxLayoutGap="1em grid">
-    <div fxFlex="33%" fxFlex.sm="33%" fxFlex.xs="100%" fxFlexFill *ngFor="let element of datasource">
-      <mat-card class="homepage-card" (click)="navigate(element.routerLink)">
+<main ngClass="app-container" ngClass.lt-md="app-container-lt-md">
+  <div fxLayout="row wrap">
+    <div fxFlex="33%" fxFlex.xs="100%" *ngFor="let element of datasource">
+      <mat-card class="app-card" (click)="navigate(element.routerLink)">
         <mat-card-header>
           <mat-card-title>{{element.title}}</mat-card-title>
           <mat-card-subtitle>{{element.subtitle}}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="{{element.image}}" alt="One Piece Image">
-        <mat-card-content class="homepage-card-content">
+        <img mat-card-image src="{{element.image}}" alt="{{element.image.name}}">
+        <mat-card-content>
           <p>{{element.content}}</p>
         </mat-card-content>
         <mat-card-actions>

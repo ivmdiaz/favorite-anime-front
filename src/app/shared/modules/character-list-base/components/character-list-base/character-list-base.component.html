@@ -1,16 +1,14 @@
-<main class="list-character">
-  <div fxLayout="row wrap" fxLayoutGap="1em grid">
-    <div fxFlex="20%" fxFlex.sm="50%" fxFlex.xs="100%" fxFlexFill *ngFor="let element of datasource">
-      <mat-card class="list-character-card" (click)="navigate(element)">
-        <mat-card-header class="list-character-card-header">
-          <mat-card-title>{{element.name}}</mat-card-title>
-          <mat-card-subtitle>{{element.alias}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{service.getPathImage(element.image)}}" alt="One Piece Image">
-        <mat-card-actions>
-          <button mat-button>EXPLORE</button>
-        </mat-card-actions>
-      </mat-card>
-    </div>
+<div fxLayout="row wrap">
+  <div fxFlex="20%" fxFlex.sm="50%" fxFlex.xs="100%" *ngFor="let element of datasource">
+    <mat-card class="app-card" (click)="navigate(element)">
+      <mat-card-header class="list-character-card-header">
+        <mat-card-title>{{element.name}}</mat-card-title>
+        <mat-card-subtitle>{{element.alias}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{service.getPathImage(element.image)}}" alt="{{element.image.name}}">
+      <mat-card-actions>
+        <button mat-button>EXPLORE</button>
+      </mat-card-actions>
+    </mat-card>
   </div>
-</main>
+</div>

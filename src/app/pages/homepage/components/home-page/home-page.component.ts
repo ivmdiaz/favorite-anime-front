@@ -1,7 +1,7 @@
-import { CardComponent } from './../../../../shared/interfaces/card-component.interface';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ANIMES, MatCardAnimeModel } from '../../interfaces/home-page-card.interface';
+import { CardComponent } from 'src/app/shared/interfaces/card-component.interface';
+import { MatCardAnimeModel, ANIMES } from '../../interfaces/home-page-card.interface';
 
 @Component({
   selector: 'app-home-page',

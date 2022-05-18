@@ -1,2 +1,8 @@
-<app-character-presentation [datasource]="datasource"></app-character-presentation>
-<app-character-content [datasource]="datasource"></app-character-content>
+<main ngClass="app-container" ngClass.lt-md="app-container-lt-md">
+  <div ngClass="character-detail-content" ngClass.lt-md="character-detail-content-lt-md">
+    <app-character-presentation [datasource]="datasource"></app-character-presentation>
+  </div>
+  <div ngClass="character-detail-content" ngClass.lt-md="character-detail-content-lt-md">
+    <app-character-content [datasource]="datasource"></app-character-content>
+  </div>
+</main>

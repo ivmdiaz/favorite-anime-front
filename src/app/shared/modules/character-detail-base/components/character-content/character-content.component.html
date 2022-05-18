@@ -1,28 +1,35 @@
-<div class="container-character">
+<mat-tab-group mat-align-tabs="center" class="tab-group">
 
-  <mat-tab-group mat-align-tabs="center" [ngClass.lt-sm]="'section-card-lt-sm'" [ngClass]="'section-card'">
-    <mat-tab label="Introduction">
-      <mat-card>
-        <mat-card-content>
-          <p class="paragraf-content" *ngFor="let content of service.getPTags(datasource.introduction)">
-            {{content}}
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </mat-tab>
-    <mat-tab label="History">
-      <mat-card>
-        <mat-card-content>
-          <p class="paragraf-content" *ngFor="let content of service.getPTags(datasource.history)">
-            {{content}}
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </mat-tab>
-    <mat-tab label="Abilities">Content 3</mat-tab>
-    <mat-tab label="Relationships">Content 3</mat-tab>
-  </mat-tab-group>
+  <mat-tab label="Introduction">
+    <mat-card>
+      <p class="paragraf-content" *ngFor="let content of service.getPTags(datasource.introduction)">
+        {{content}}
+      </p>
+    </mat-card>
+  </mat-tab>
 
+  <mat-tab label="History">
+    <mat-card>
+      <p class="paragraf-content" *ngFor="let content of service.getPTags(datasource.history)">
+        {{content}}
+      </p>
+    </mat-card>
+  </mat-tab>
 
+  <mat-tab label="Abilities">
+    <mat-card>
+      <p class="paragraf-content" *ngFor="let content of service.getPTags(datasource.abilities)">
+        {{content}}
+      </p>
+    </mat-card>
+  </mat-tab>
 
-</div>
+  <mat-tab label="Relationships" *ngIf="datasource.relationships">
+    <app-character-relationship [datasource]="datasource.relationships"></app-character-relationship>
+  </mat-tab>
+
+  <mat-tab label="Gallery" *ngIf="datasource.gallery">
+    <app-character-gallery [datasource]="datasource.gallery"></app-character-gallery>
+  </mat-tab>
+
+</mat-tab-group>

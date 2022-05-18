@@ -1,3 +1,4 @@
-<app-character-list-base [datasource]="datasource" (navigateItemEvent)="navigate($event)">
-</app-character-list-base>
-<app-footer></app-footer>
+<main ngClass="app-container" ngClass.lt-md="app-container-lt-md">
+  <app-character-list-base [datasource]="datasource" (navigateItemEvent)="navigate($event)">
+  </app-character-list-base>
+</main>

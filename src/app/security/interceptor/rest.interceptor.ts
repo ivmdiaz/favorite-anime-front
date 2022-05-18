@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable, throwError } from "rxjs";
 import { environment } from "src/environments/environment";
 import { timeout, retry, tap, catchError, finalize } from 'rxjs/operators';
-import { SpinnerService } from "src/app/shared/modules/spinner/services/spinner.service";
+import { NgxSpinnerService } from "ngx-spinner";
 
 const SESION_TIME_OUT = 30 * 60 * 60 * 1000;
 
@@ -13,7 +13,7 @@ const SESION_TIME_OUT = 30 * 60 * 60 * 1000;
 })
 export class RestInterceptor implements HttpInterceptor {
 
-  constructor(private spinner: SpinnerService) {
+  constructor(private spinner: NgxSpinnerService) {
 
   }
 
@@ -22,11 +22,11 @@ export class RestInterceptor implements HttpInterceptor {
     this.spinner.show();
 
     if (request.url.includes('i18n')) {
-      return next.handle(request);
+      return next.handle(request).pipe(finalize(() => this.finalize()));
     }
 
     if (request.url.indexOf('/assets') > 0) {
-      return next.handle(request);
+      return next.handle(request).pipe(finalize(() => this.finalize()));
     }
 
     let { url } = request;
@@ -53,7 +53,7 @@ export class RestInterceptor implements HttpInterceptor {
         }),
         retry(1),
         timeout(SESION_TIME_OUT),
-        finalize(() => this.spinner.hide())
+        finalize(() => this.finalize())
       )
       ;
   }
@@ -66,6 +66,10 @@ export class RestInterceptor implements HttpInterceptor {
 
   private prefixMessage(logType: string, message?: string) {
     return `[${logType.toUpperCase()} ${new Date().toTimeString().slice(0, 8)}] ${message}`;
+  }
+
+  private finalize(): void {
+    this.spinner.hide()
   }
 
 }

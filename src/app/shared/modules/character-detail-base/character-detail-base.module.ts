@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonsModule } from '../commons/commons.module';
-import { GalleryComponent } from './components/gallery/gallery.component';
 import { CharacterPresentationComponent } from './components/character-presentation/character-presentation.component';
 import { CharacterContentComponent } from './components/character-content/character-content.component';
+import { CharacterGalleryComponent } from './components/character-gallery/character-gallery.component';
+import { CharacterRelationshipComponent } from './components/character-relationship/character-relationship.component';
 
 
 
@@ -10,7 +11,8 @@ import { CharacterContentComponent } from './components/character-content/charac
   declarations: [
     CharacterPresentationComponent,
     CharacterContentComponent,
-    GalleryComponent,
+    CharacterGalleryComponent,
+    CharacterRelationshipComponent,
   ],
   imports: [
     CommonsModule,
@@ -18,7 +20,6 @@ import { CharacterContentComponent } from './components/character-content/charac
   exports: [
     CharacterPresentationComponent,
     CharacterContentComponent,
-    GalleryComponent
   ]
 })
 export class CharacterDetailBaseModule { }
