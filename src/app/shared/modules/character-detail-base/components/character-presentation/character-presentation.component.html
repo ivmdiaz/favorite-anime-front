@@ -5,22 +5,22 @@
       <h1>{{character.name}}</h1>
     </div>
     <div fxLayoutAlign="center center">
-      <img class="image-avatar" src="{{service.getPathImage(character.image)}}" alt="image not found">
+      <img class="image-avatar" src="{{service.getImageSource(character.image)}}" alt="image not found">
     </div>
   </div>
 
   <div fxFlex="40%" fxLayout="column" fxLayoutAlign="center stretch" fxLayoutGap="1em">
     <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="center center">
       <div fxFlex="33%" fxFlex.sm="20%" fxLayout="column" fxLayoutAlign="center center">
-        <img class="image-presentation" src="assets/img/one-piece/characters/presentation/birthday.png">
+        <img class="image-presentation" src="assets/img/one-piece/character-presentation/birthday.png">
         <h3>{{character.birthday | date: 'MMMM d'}}</h3>
       </div>
       <div fxFlex="33%" fxFlex.sm="20%" fxLayout="column" fxLayoutAlign="center center">
-        <img class="image-presentation" src="assets/img/one-piece/characters/presentation/place.png">
+        <img class="image-presentation" src="assets/img/one-piece/character-presentation/place.png">
         <h3>{{location.name}}</h3>
       </div>
       <div fxFlex="33%" fxFlex.sm="20%" fxLayout="column" fxLayoutAlign="center center">
-        <img class="image-presentation" src="assets/img/one-piece/characters/presentation/alias.png">
+        <img class="image-presentation" src="assets/img/one-piece/character-presentation/alias.png">
         <h3>{{character.alias}}</h3>
       </div>
     </div>

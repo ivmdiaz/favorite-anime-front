@@ -2,7 +2,7 @@
 
   <mat-tab label="Introduction">
     <mat-card>
-      <p class="paragraf-content" *ngFor="let content of service.getPTags(datasource.introduction)">
+      <p class="paragraf-content" *ngFor="let content of service.getParagraphs(datasource.introduction)">
         {{content}}
       </p>
     </mat-card>
@@ -10,7 +10,7 @@
 
   <mat-tab label="History">
     <mat-card>
-      <p class="paragraf-content" *ngFor="let content of service.getPTags(datasource.history)">
+      <p class="paragraf-content" *ngFor="let content of service.getParagraphs(datasource.history)">
         {{content}}
       </p>
     </mat-card>
@@ -18,7 +18,7 @@
 
   <mat-tab label="Abilities">
     <mat-card>
-      <p class="paragraf-content" *ngFor="let content of service.getPTags(datasource.abilities)">
+      <p class="paragraf-content" *ngFor="let content of service.getParagraphs(datasource.abilities)">
         {{content}}
       </p>
     </mat-card>

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ImageModel } from 'src/app/shared/interfaces/image.interface';
+import { UtilService } from 'src/app/shared/services/util.service';
 
 @Component({
   selector: 'app-character-gallery',
@@ -19,7 +20,7 @@ export class CharacterGalleryComponent implements OnInit {
   currentValue: ImageModel;
   currentIndex: number;
 
-  constructor() {
+  constructor(public service: UtilService) {
 
   }
 

@@ -15,7 +15,6 @@ export class CharacterContentComponent implements OnInit {
   constructor(public service: UtilService) { }
 
   ngOnInit(): void {
-    console.log(this.datasource)
   }
 
 }

@@ -1,6 +1,6 @@
 <div fxLayout="column" *ngIf="datasource">
   <div class="gallery-current">
-    <img class="gallery-current-image" [src]="currentValue.url">
+    <img class="gallery-current-image" src="{{service.getImageSource(currentValue)}}">
     <button class="prev" mat-mini-fab color="primary" (click)="next()">
       <mat-icon>navigate_before</mat-icon>
     </button>
@@ -11,7 +11,7 @@
 
   <div *ngIf="selector" fxLayout="row wrap" fxLayoutAlign="center center">
     <div fxFlex="20%" *ngFor="let image of datasource; index as i">
-      <img class="gallery-selector-image" [src]="image.url" (click)="selectImage(i)">
+      <img class="gallery-selector-image" src="{{service.getImageSource(image)}}" (click)="selectImage(i)">
     </div>
   </div>
 </div>
