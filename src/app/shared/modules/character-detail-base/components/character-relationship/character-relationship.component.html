@@ -1,7 +1,7 @@
 <div *ngIf="datasource">
   <div fxLayout="row wrap">
     <div fxFlex="25%" fxFlex.xs="50%" *ngFor="let element of datasource">
-      <mat-card ngClass="app-card">
+      <mat-card ngClass="list-charcater-card" ngClass.lt-md="list-charcater-card-lt-md">
         <mat-card-header>
           <mat-card-title>{{element.character.name}}</mat-card-title>
           <mat-card-subtitle>{{element.relationship.name}}</mat-card-subtitle>

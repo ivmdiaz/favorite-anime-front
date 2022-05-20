@@ -1,0 +1,19 @@
+.list-charcater-card {
+  margin: 1em;
+  mat-card-header {
+    min-height: 5.5em;
+  }
+}
+
+.list-charcater-card-lt-md {
+  margin: 0.5em;
+  mat-card-header {
+    min-height: 4.5em;
+  }
+  mat-card-title {
+    font-size: 0.9em;
+  }
+  mat-card-subtitle {
+    font-size: 0.8em;
+  }
+}
