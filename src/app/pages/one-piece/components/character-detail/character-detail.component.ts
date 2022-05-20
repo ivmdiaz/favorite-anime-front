@@ -12,7 +12,9 @@ export class CharacterDetailComponent implements OnInit {
   datasource: CharacterDetailModel;
 
   constructor(public service: OnePieceService) {
-    this.service.getCharacterDetail().subscribe(result => this.datasource = result);
+    this.service.getCharacterSelected().subscribe(character => {
+      this.service.getCharacterDetail(character.id).subscribe(result => this.datasource = result);
+    })
   }
 
   ngOnInit(): void {

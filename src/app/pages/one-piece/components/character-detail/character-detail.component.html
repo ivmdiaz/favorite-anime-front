@@ -1,4 +1,4 @@
-<main ngClass="app-container" ngClass.lt-md="app-container-lt-md">
+<main ngClass="app-container" ngClass.lt-md="app-container-lt-md" *ngIf="datasource">
   <div ngClass="character-detail-content" ngClass.lt-md="character-detail-content-lt-md">
     <app-character-presentation [datasource]="datasource"></app-character-presentation>
   </div>
