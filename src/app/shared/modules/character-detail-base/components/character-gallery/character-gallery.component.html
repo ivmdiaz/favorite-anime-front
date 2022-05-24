@@ -1,10 +1,10 @@
 <div fxLayout="column" *ngIf="datasource">
   <div class="gallery-current">
     <img class="gallery-current-image" src="{{service.getImageSource(currentValue)}}">
-    <button class="prev" mat-mini-fab color="primary" (click)="next()">
+    <button class="prev" mat-mini-fab color="primary" (click)="prev()">
       <mat-icon>navigate_before</mat-icon>
     </button>
-    <button class="next" mat-mini-fab color="primary" (click)="prev()">
+    <button class="next" mat-mini-fab color="primary" (click)="next()">
       <mat-icon class="myIcon">navigate_next</mat-icon>
     </button>
   </div>
